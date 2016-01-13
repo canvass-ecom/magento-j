@@ -1,2 +1,2 @@
-# canvass-ecom-magento
-Magento Integration with Firecart
+# magento-j
+Magento library for java
