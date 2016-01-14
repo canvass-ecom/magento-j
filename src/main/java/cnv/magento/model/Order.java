@@ -19,7 +19,7 @@ public class Order extends MagentoBaseModel {
     @SerializedName(value = "status")
     private String status;
     @SerializedName(value = "customer_id")
-    private String customerId;
+    private Long customerId;
     @SerializedName(value = "email")
     private String email;
     @SerializedName(value = "base_currency_code")
@@ -31,11 +31,11 @@ public class Order extends MagentoBaseModel {
     @SerializedName(value = "order_items")
     private List<OrderItem> orderItems;
 
-    public String getCustomerId() {
+    public Long getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public void setCustomerId(Long customerId) {
         this.customerId = customerId;
     }
 
