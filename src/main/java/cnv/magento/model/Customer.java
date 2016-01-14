@@ -1,16 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * @author Rohit Shinde @Canvass
+ * 13 Jan, 2016
  */
 package cnv.magento.model;
 
 import com.google.gson.annotations.SerializedName;
 import java.util.Date;
 
-/**
- *
- * @author Rohit Shinde @Canvass
- */
 public class Customer extends MagentoBaseModel {
     
     @SerializedName(value = "firstname")

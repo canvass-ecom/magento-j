@@ -1,6 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * @author Rohit Shinde @Canvass
+ * 13 Jan, 2016
  */
 package cnv.magento;
 
@@ -12,10 +13,6 @@ import org.scribe.model.Token;
 import org.scribe.model.Verifier;
 import org.scribe.oauth.OAuthService;
 
-/**
- *
- * @author Rohit Shinde @Canvass
- */
 public class MagentoClient {
     
     private HashMap<Class, MagentoBaseService> services;

@@ -1,16 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * @author Rohit Shinde @Canvass
+ * 13 Jan, 2016
  */
 package cnv.magento;
 
 import org.scribe.builder.api.DefaultApi10a;
 import org.scribe.model.Token;
 
-/**
- *
- * @author Rohit Shinde @Canvass
- */
 public class MagentoThreeLeggedOAuth extends DefaultApi10a {
 
     private String baseUrl;

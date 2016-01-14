@@ -1,15 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * @author Rohit Shinde @Canvass
+ * 13 Jan, 2016
  */
 package cnv.magento.model;
 
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
-/**
- *
- * @author Rohit Shinde @Canvass
- */
+
 public class MagentoBaseModel implements Serializable {
 
     @SerializedName(value = "entity_id")

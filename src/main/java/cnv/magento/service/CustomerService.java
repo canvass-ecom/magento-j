@@ -1,6 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * @author Rohit Shinde @Canvass
+ * 13 Jan, 2016
  */
 package cnv.magento.service;
 
@@ -12,10 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import org.scribe.model.Response;
-/**
- *
- * @author Rohit Shinde @Canvass
- */
+
 public class CustomerService extends MagentoBaseService {
     
     public List<Customer> getCustomers() throws Exception {

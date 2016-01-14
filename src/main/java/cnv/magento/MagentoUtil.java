@@ -1,16 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * @author Rohit Shinde @Canvass
+ * 13 Jan, 2016
  */
 package cnv.magento;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-/**
- *
- * @author Rohit Shinde @Canvass
- */
 public class MagentoUtil {
 
     public static Gson getGson() {

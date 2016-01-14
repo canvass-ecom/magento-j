@@ -1,13 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package cnv.magento.model;
-
 /**
  *
  * @author Rohit Shinde @Canvass
+ * 13 Jan, 2016
  */
+package cnv.magento.model;
+
 public class MagentoCredentials {    
     private String shopUrl;
     private String consumerKey;
