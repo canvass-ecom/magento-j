@@ -1,8 +1,7 @@
 h1. magento-j
 
-"magento-j" is a Java connector for Magento's rest API
-
-The goal its build a java interface to access the Magento API and exchange data.
+"magento-j" is a Java connector for Magento's rest API.
+The goal its build a java interface to access the Magento API and get the required data.
 
 h2. Usage:
 
