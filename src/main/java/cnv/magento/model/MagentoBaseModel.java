@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 /**
  *
- * @author Owner
+ * @author Rohit Shinde @Canvass
  */
 public class MagentoBaseModel implements Serializable {
 

@@ -6,7 +6,7 @@ package cnv.magento;
 
 /**
  *
- * @author Owner
+ * @author Rohit Shinde @Canvass
  */
 public @interface RestService {
     

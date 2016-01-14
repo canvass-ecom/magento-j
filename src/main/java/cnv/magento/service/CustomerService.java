@@ -14,7 +14,7 @@ import java.util.List;
 import org.scribe.model.Response;
 /**
  *
- * @author Owner
+ * @author Rohit Shinde @Canvass
  */
 public class CustomerService extends MagentoBaseService {
     

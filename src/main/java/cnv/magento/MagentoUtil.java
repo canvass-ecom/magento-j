@@ -9,7 +9,7 @@ import com.google.gson.GsonBuilder;
 
 /**
  *
- * @author Owner
+ * @author Rohit Shinde @Canvass
  */
 public class MagentoUtil {
 

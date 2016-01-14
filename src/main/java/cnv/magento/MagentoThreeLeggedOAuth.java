@@ -9,7 +9,7 @@ import org.scribe.model.Token;
 
 /**
  *
- * @author Owner
+ * @author Rohit Shinde @Canvass
  */
 public class MagentoThreeLeggedOAuth extends DefaultApi10a {
 

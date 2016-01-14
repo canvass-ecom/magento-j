@@ -15,7 +15,7 @@ import org.scribe.oauth.OAuthService;
 
 /**
  *
- * @author Owner
+ * @author Rohit Shinde @Canvass
  */
 public class MagentoBaseService {
 

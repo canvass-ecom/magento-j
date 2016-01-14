@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author Owner
+ * @author Rohit Shinde @Canvass
  */
 public class Customer extends MagentoBaseModel {
     

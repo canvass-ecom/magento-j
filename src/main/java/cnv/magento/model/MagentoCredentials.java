@@ -6,7 +6,7 @@ package cnv.magento.model;
 
 /**
  *
- * @author Owner
+ * @author Rohit Shinde @Canvass
  */
 public class MagentoCredentials {    
     private String shopUrl;

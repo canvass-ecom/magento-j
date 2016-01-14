@@ -9,7 +9,7 @@ import java.lang.reflect.Type;
 
 /**
  *
- * @author Naga Srinivas @Canvass
+ * @author Rohit Shinde @Canvass
  */
 public class MagentoResponseParser {
 

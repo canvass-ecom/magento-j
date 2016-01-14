@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  *
- * @author Owner
+ * @author Rohit Shinde @Canvass
  */
 public class Address extends MagentoBaseModel {
 

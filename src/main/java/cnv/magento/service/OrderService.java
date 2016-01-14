@@ -15,7 +15,7 @@ import org.scribe.model.Response;
 
 /**
  *
- * @author Owner
+ * @author Rohit Shinde @Canvass
  */
 public class OrderService extends MagentoBaseService {
     
