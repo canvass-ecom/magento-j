@@ -88,6 +88,9 @@ public class Customer extends MagentoBaseModel {
     }
 
     public Float getTotalSpent() {
+        if(totalSpent == null){
+            return 0f;
+        }
         return totalSpent;
     }
 
