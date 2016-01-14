@@ -22,9 +22,9 @@ public class Customer extends MagentoBaseModel {
     private String gender;
     @SerializedName(value = "last_order_id")
     private Long lastOrderId = -1L;
-    @SerializedName(value = "total_spent")
+    @SerializedName(value = "total_amount_spent")
     private Float totalSpent;
-    @SerializedName(value = "orders_count")
+    @SerializedName(value = "total_orders")
     private Integer totalOrders = 0;
 
     public Date getRegisteredDate() {
