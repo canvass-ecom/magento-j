@@ -23,7 +23,7 @@ public class Order extends MagentoBaseModel {
     @SerializedName(value = "base_currency_code")
     private String currency;
     @SerializedName(value = "created_at")
-    private Date orderDate;
+    private Date purchaseDate;
     @SerializedName(value = "addresses")
     private List<Address> addresses;
     @SerializedName(value = "order_items")
@@ -45,12 +45,12 @@ public class Order extends MagentoBaseModel {
         this.currency = currency;
     }
 
-    public Date getPurchasedDate() {
-        return orderDate;
+    public Date getPurchaseDate() {
+        return purchaseDate;
     }
 
-    public void setPurchasedDate(Date purchasedDate) {
-        this.orderDate = purchasedDate;
+    public void setPurchaseDate(Date purchaseDate) {
+        this.purchaseDate = purchaseDate;
     }
 
     public float getDiscountAmount() {
@@ -83,14 +83,6 @@ public class Order extends MagentoBaseModel {
 
     public void setOrderAmount(float orderAmount) {
         this.orderAmount = orderAmount;
-    }
-
-    public Date getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(Date registeredDate) {
-        this.orderDate = registeredDate;
     }
 
     public String getStatus() {
