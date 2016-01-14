@@ -18,6 +18,8 @@ public class Order extends MagentoBaseModel {
     private float orderAmount;
     @SerializedName(value = "status")
     private String status;
+    @SerializedName(value = "customer_id")
+    private String customerId;
     @SerializedName(value = "email")
     private String email;
     @SerializedName(value = "base_currency_code")
@@ -28,6 +30,14 @@ public class Order extends MagentoBaseModel {
     private List<Address> addresses;
     @SerializedName(value = "order_items")
     private List<OrderItem> orderItems;
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
 
     public List<Address> getAddresses() {
         return addresses;
