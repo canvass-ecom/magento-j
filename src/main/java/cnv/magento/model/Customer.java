@@ -24,7 +24,7 @@ public class Customer extends MagentoBaseModel {
     private Long lastOrderId = -1L;
     @SerializedName(value = "total_amount_spent")
     private Float totalSpent;
-    @SerializedName(value = "total_orders")
+    @SerializedName(value = "orders_count")
     private Integer totalOrders = 0;
 
     public Date getRegisteredDate() {
