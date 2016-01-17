@@ -41,6 +41,9 @@ public class MagentoBaseService {
         request.addHeader("Content-Type", "application/json");
         service.signRequest(permanentToken, request);
         Response response = request.send();
+        if(client.isDebugEnabled() && response != null){
+            MagentoClient.log(response.getBody());
+        }
         return response;
     }
 }
