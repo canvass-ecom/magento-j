@@ -11,11 +11,10 @@ import org.scribe.model.Token;
 public class MagentoThreeLeggedOAuth extends DefaultApi10a {
 
     private String baseUrl;
-    private String customAdminPath;
+    private String customAdminPath = "/cadminpanel"; //hack for jubination
 
-    public MagentoThreeLeggedOAuth(String baseUrl, String customAdminPath) {
+    public MagentoThreeLeggedOAuth(String baseUrl) {
         this.baseUrl = baseUrl;
-        this.customAdminPath = (customAdminPath == null || customAdminPath.isEmpty()) ? "admin" : customAdminPath;
     }
 
     @Override
@@ -31,7 +30,7 @@ public class MagentoThreeLeggedOAuth extends DefaultApi10a {
 
     @Override
     public String getAuthorizationUrl(Token requestToken) {
-        return baseUrl + "/" + customAdminPath + "/oauth_authorize?oauth_token="
+        return baseUrl + customAdminPath +"/oauth_authorize?oauth_token="
                 + requestToken.getToken(); //this implementation is for admin roles only...
     }
 }
