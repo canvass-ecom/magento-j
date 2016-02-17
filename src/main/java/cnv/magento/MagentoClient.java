@@ -69,7 +69,7 @@ public class MagentoClient {
     
     public HashMap getRequestTokenAndAuthorizationUrl(){
         HashMap map = new HashMap();
-        OAuthService service = new ServiceBuilder().provider(new MagentoThreeLeggedOAuth(creds.getShopUrl())).
+        OAuthService service = new ServiceBuilder().provider(new MagentoThreeLeggedOAuth(creds.getShopUrl(), creds.getCustomAdminPath())).
                 apiKey(creds.getConsumerKey()).
                 apiSecret(creds.getConsumerSecret()).
                 build();
@@ -81,7 +81,7 @@ public class MagentoClient {
     }
     
     public Token getAcessToken(String token, String tokenSecret, String verifierStr){
-        OAuthService service = new ServiceBuilder().provider(new MagentoThreeLeggedOAuth(creds.getShopUrl())).
+        OAuthService service = new ServiceBuilder().provider(new MagentoThreeLeggedOAuth(creds.getShopUrl(), creds.getCustomAdminPath())).
                 apiKey(creds.getConsumerKey()).
                 apiSecret(creds.getConsumerSecret()).
                 build();

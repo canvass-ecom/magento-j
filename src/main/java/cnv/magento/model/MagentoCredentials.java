@@ -12,18 +12,20 @@ public class MagentoCredentials {
     private String accessKey;
     private String accessSecret;
     private String customRestApi;
+    private String customAdminPath;
 
     private MagentoCredentials(String shopUrl, String consumerKey, String consumerSecret, String accessKey, String accessSecret) {
-        this(shopUrl, consumerKey, consumerSecret, accessKey, accessSecret, "");
+        this(shopUrl, consumerKey, consumerSecret, accessKey, accessSecret, "", "");
     }
 
-    private MagentoCredentials(String shopUrl, String consumerKey, String consumerSecret, String accessKey, String accessSecret, String customRestApi) {
+    private MagentoCredentials(String shopUrl, String consumerKey, String consumerSecret, String accessKey, String accessSecret, String customRestApi, String customAdminPath) {
         this.shopUrl = shopUrl;
         this.consumerKey = consumerKey;
         this.consumerSecret = consumerSecret;
         this.accessKey = accessKey;
         this.accessSecret = accessSecret;
         this.customRestApi = customRestApi;
+        this.customAdminPath = customAdminPath;
     }
 
     private MagentoCredentials(String shopUrl, String consumerKey, String consumerSecret) {
@@ -34,6 +36,14 @@ public class MagentoCredentials {
 
     public String getCustomRestApi() {
         return customRestApi;
+    }
+
+    public String getCustomAdminPath() {
+        return customAdminPath;
+    }
+
+    public void setCustomAdminPath(String customAdminPath) {
+        this.customAdminPath = customAdminPath;
     }
 
     public void setCustomRestApi(String customRestApi) {
@@ -90,7 +100,7 @@ public class MagentoCredentials {
         return new MagentoCredentials(shopUrl, consumerKey, consumerSecret, accessKey, accessSecret);
     }
 
-    public static MagentoCredentials createWithTokenCustomRestApi(String shopUrl, String consumerKey, String consumerSecret, String accessKey, String accessSecret, String customRestApi) {
-        return new MagentoCredentials(shopUrl, consumerKey, consumerSecret, accessKey, accessSecret, customRestApi);
+    public static MagentoCredentials createWithTokenCustomRestApi(String shopUrl, String consumerKey, String consumerSecret, String accessKey, String accessSecret, String customRestApi, String customAdminPath) {
+        return new MagentoCredentials(shopUrl, consumerKey, consumerSecret, accessKey, accessSecret, customRestApi, customAdminPath);
     }
 }
