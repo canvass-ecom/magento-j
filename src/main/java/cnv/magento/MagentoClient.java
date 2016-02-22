@@ -1,7 +1,6 @@
 /**
  *
- * @author Rohit Shinde @Canvass
- * 13 Jan, 2016
+ * @author Rohit Shinde @Canvass 13 Jan, 2016
  */
 package cnv.magento;
 
@@ -14,7 +13,7 @@ import org.scribe.model.Verifier;
 import org.scribe.oauth.OAuthService;
 
 public class MagentoClient {
-    
+
     private HashMap<Class, MagentoBaseService> services;
     private MagentoCredentials creds;
     String baseUrl;
@@ -31,20 +30,20 @@ public class MagentoClient {
     public boolean isDebugEnabled() {
         return debug;
     }
-    
+
     public MagentoClient(MagentoCredentials credentails) {
         this.creds = credentails;
         String customRestApi = "";
-        if(creds.getCustomRestApi() != null && !creds.getCustomRestApi().isEmpty()){
-           customRestApi = "/"+creds.getCustomRestApi();
+        if (creds.getCustomRestApi() != null && !creds.getCustomRestApi().isEmpty()) {
+            customRestApi = "/" + creds.getCustomRestApi();
         }
-        baseUrl = creds.getShopUrl()+"/api/rest"+customRestApi;
+        baseUrl = creds.getShopUrl() + "/api/rest" + customRestApi;
     }
-    
+
     public MagentoCredentials getCredentials() {
         return creds;
     }
-    
+
     public String getBaseUrl() {
         return baseUrl;
     }
@@ -52,6 +51,7 @@ public class MagentoClient {
     public static void log(String msg) {
         System.out.println("[Magento] " + msg);
     }
+
     /**
      * This method will create the Given Service
      *
@@ -66,12 +66,13 @@ public class MagentoClient {
         obj.setClient(this);
         return obj;
     }
-    
-    public HashMap getRequestTokenAndAuthorizationUrl(){
+
+    public HashMap getRequestTokenAndAuthorizationUrl() {
         HashMap map = new HashMap();
-        OAuthService service = new ServiceBuilder().provider(new MagentoThreeLeggedOAuth(creds.getShopUrl())).
+        OAuthService service = new ServiceBuilder().provider(new MagentoThreeLeggedOAuth(creds.getShopUrl(), creds.getCustomAdminPath())).
                 apiKey(creds.getConsumerKey()).
                 apiSecret(creds.getConsumerSecret()).
+                debug().
                 build();
         Token requestToken = service.getRequestToken();
         map.put("token", requestToken.getToken());
@@ -79,9 +80,9 @@ public class MagentoClient {
         map.put("authorizationUrl", service.getAuthorizationUrl(requestToken));
         return map;
     }
-    
-    public Token getAcessToken(String token, String tokenSecret, String verifierStr){
-        OAuthService service = new ServiceBuilder().provider(new MagentoThreeLeggedOAuth(creds.getShopUrl())).
+
+    public Token getAcessToken(String token, String tokenSecret, String verifierStr) {
+        OAuthService service = new ServiceBuilder().provider(new MagentoThreeLeggedOAuth(creds.getShopUrl(), creds.getCustomAdminPath())).
                 apiKey(creds.getConsumerKey()).
                 apiSecret(creds.getConsumerSecret()).
                 build();

@@ -9,27 +9,38 @@ public class MagentoCredentials {
     private String shopUrl;
     private String consumerKey;
     private String consumerSecret;
+    private String customAdminPath;
     private String accessKey;
     private String accessSecret;
     private String customRestApi;
 
-    private MagentoCredentials(String shopUrl, String consumerKey, String consumerSecret, String accessKey, String accessSecret) {
-        this(shopUrl, consumerKey, consumerSecret, accessKey, accessSecret, "");
+    private MagentoCredentials(String shopUrl, String consumerKey, String consumerSecret, String customAdminPath, String accessKey, String accessSecret) {
+        this(shopUrl, consumerKey, consumerSecret, customAdminPath, accessKey, accessSecret, "");
     }
 
-    private MagentoCredentials(String shopUrl, String consumerKey, String consumerSecret, String accessKey, String accessSecret, String customRestApi) {
+    private MagentoCredentials(String shopUrl, String consumerKey, String consumerSecret, String customAdminPath, String accessKey, String accessSecret, String customRestApi) {
         this.shopUrl = shopUrl;
         this.consumerKey = consumerKey;
         this.consumerSecret = consumerSecret;
+        this.customAdminPath = customAdminPath;
         this.accessKey = accessKey;
         this.accessSecret = accessSecret;
         this.customRestApi = customRestApi;
     }
 
-    private MagentoCredentials(String shopUrl, String consumerKey, String consumerSecret) {
+    private MagentoCredentials(String shopUrl, String consumerKey, String consumerSecret, String customAdminPath) {
         this.shopUrl = shopUrl;
         this.consumerKey = consumerKey;
         this.consumerSecret = consumerSecret;
+        this.customAdminPath = customAdminPath;
+    }
+
+    public String getCustomAdminPath() {
+        return customAdminPath;
+    }
+
+    public void setCustomAdminPath(String customAdminPath) {
+        this.customAdminPath = customAdminPath;
     }
 
     public String getCustomRestApi() {
@@ -82,15 +93,15 @@ public class MagentoCredentials {
         return (accessKey != null && accessKey.length() != 0) && (accessSecret != null && accessSecret.length() != 0);
     }
 
-    public static MagentoCredentials create(String shopUrl, String consumerKey, String consumerSecret) {
-        return new MagentoCredentials(shopUrl, consumerKey, consumerSecret);
+    public static MagentoCredentials create(String shopUrl, String consumerKey, String consumerSecret, String customAdminPath) {
+        return new MagentoCredentials(shopUrl, consumerKey, consumerSecret, customAdminPath);
     }
 
-    public static MagentoCredentials createWithToken(String shopUrl, String consumerKey, String consumerSecret, String accessKey, String accessSecret) {
-        return new MagentoCredentials(shopUrl, consumerKey, consumerSecret, accessKey, accessSecret);
+    public static MagentoCredentials createWithToken(String shopUrl, String consumerKey, String consumerSecret, String customAdminPath, String accessKey, String accessSecret) {
+        return new MagentoCredentials(shopUrl, consumerKey, consumerSecret, accessKey, accessSecret, customAdminPath);
     }
 
-    public static MagentoCredentials createWithTokenCustomRestApi(String shopUrl, String consumerKey, String consumerSecret, String accessKey, String accessSecret, String customRestApi) {
-        return new MagentoCredentials(shopUrl, consumerKey, consumerSecret, accessKey, accessSecret, customRestApi);
+    public static MagentoCredentials createWithTokenCustomRestApi(String shopUrl, String consumerKey, String consumerSecret, String customAdminPath, String accessKey, String accessSecret, String customRestApi) {
+        return new MagentoCredentials(shopUrl, consumerKey, consumerSecret, customAdminPath, accessKey, accessSecret, customRestApi);
     }
 }

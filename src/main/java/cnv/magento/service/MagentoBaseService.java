@@ -32,7 +32,7 @@ public class MagentoBaseService {
     }
 
     protected Response execute(String queryString) {
-        OAuthService service = new ServiceBuilder().provider(new MagentoThreeLeggedOAuth(client.getCredentials().getShopUrl())).
+        OAuthService service = new ServiceBuilder().provider(new MagentoThreeLeggedOAuth(client.getCredentials().getShopUrl(), client.getCredentials().getCustomAdminPath())).
                 apiKey(client.getCredentials().getConsumerKey()).
                 apiSecret(client.getCredentials().getConsumerSecret()).
                 build();
